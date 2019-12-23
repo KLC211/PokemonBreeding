@@ -32,8 +32,10 @@ public class DemoApplication {
 
 			int selection = input.nextInt();
 
-			
+
 			System.out.println(GetAndPost.MyGet(selection));
+
+
 		};
 	};
 
