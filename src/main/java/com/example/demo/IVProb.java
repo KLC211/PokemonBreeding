@@ -5,6 +5,7 @@ import java.util.ArrayList;
 public class IVProb {
     public static float[] IVPerm(IndPokemon mother, IndPokemon father){
         float prob[]=new float[7];
+        float random=1/32f;
         for (int i=0; i<7;i++)
             prob[i]=1;
 
@@ -13,7 +14,7 @@ public class IVProb {
         else if (mother.isHP() == false ^ father.isHP() == false) {
             prob[0] = (float) (prob[0] * 0.5);
         } else {
-            prob[0] = prob[0] * 1/32;
+            prob[0] = prob[0] * random;
         }
 
         if (mother.isAttack()==true&&father.isAttack()==true)
@@ -22,7 +23,7 @@ public class IVProb {
             prob[1]= (float) (prob[1]* 0.5);
         }
         else {
-            prob[1]=prob[1]*1/32;
+            prob[1]=prob[1]*random;
         }
 
         if (mother.isDefense() == true && father.isDefense() == true)
@@ -30,7 +31,7 @@ public class IVProb {
         else if (mother.isDefense() == false ^ father.isDefense() == false) {
             prob[2] = (float) (prob[2] * 0.5);
         } else {
-            prob[2] = prob[2] * 1/32;
+            prob[2] = prob[2] * random;
         }
 
         if (mother.isSpecialAttack() == true && father.isSpecialAttack() == true)
@@ -38,7 +39,7 @@ public class IVProb {
         else if (mother.isSpecialAttack() == false ^ father.isSpecialAttack() == false) {
             prob[3] = (float) (prob[3] * 0.5);
         } else {
-            prob[3] = prob[3] * 1/32;
+            prob[3] = prob[3] * random;
         }
 
         if (mother.isSpecialDefense() == true && father.isSpecialDefense() == true)
@@ -46,7 +47,7 @@ public class IVProb {
         else if (mother.isSpecialDefense() == false ^ father.isSpecialDefense() == false) {
             prob[4] = (float) (prob[4] * 0.5);
         } else {
-            prob[4] = prob[4] * 1/32;
+            prob[4] = prob[4] * random;
         }
 
         if (mother.isSpeed() == true && father.isSpeed() == true)
@@ -54,7 +55,7 @@ public class IVProb {
         else if (mother.isHP() == false ^ father.isHP() == false) {
             prob[5] = (float) (prob[5] * 0.5);
         } else {
-            prob[5] = prob[5] * 1/32;
+            prob[5] = prob[5] * random;
         }
 
         if (mother.isHA()){
